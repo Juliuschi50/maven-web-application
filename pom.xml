@@ -96,13 +96,13 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>Landmark Technologies Releases Nexus Repository</name>
-	      <url>http://52.91.56.63:8081/repository/Pipeline-web-application-releases//</url>
+	      <url>http://172.31.31.211:8081/repository/Pipeline-web-application-releases//</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>Landmark Technologies Snapshot Nexus Repository </name>
-	      <url>http://52.91.56.63:8081/repository/Pipeline-web-application-Snapshot//</url>
+	      <url>http://172.31.31.211:8081/repository/Pipeline-web-application-Snapshot//</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
