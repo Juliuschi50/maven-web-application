@@ -1,0 +1,26 @@
+node{
+    def mavenhome = tool name: 'maven3.8.6'
+    stage('1clonecode'){
+    git "https://github.com/Juliuschi50/maven-web-application"
+    }
+  stage('2test$build'){
+      sh "${mavenhome}/bin/mvn package"
+  }
+  stage('3CodeQuality'){
+      sh "${mavenhome}/bin/mvn sonar:sonar"
+  }
+  stage('4deploy_artifacts'){
+        sh "${mavenhome}/bin/mvn deploy"
+    }
+    stage('5deployment-AUT'){
+       deploy adapters: [tomcat9(credentialsId: 'tomcat-login-credentials', path: '', url: 'http://54.163.23.8:8080/')], contextPath: null, war: 'target/*war'
+    }
+     stage('6Approval-stage'){
+        timeout(time:5, unit:'HOURS'){
+            input message: 'Please, monitor application performs and approve for deployment to productions or recomment changes'
+        }
+    }
+    stage('5deployment-Prod'){
+       deploy adapters: [tomcat9(credentialsId: 'tomcat-login-credentials', path: '', url: 'http://54.163.23.8:8080/')], contextPath: null, war: 'target/*war'
+    }
+}
