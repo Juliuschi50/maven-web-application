@@ -102,7 +102,7 @@
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>Landmark Technologies Snapshot Nexus Repository </name>
-	      <url>http://54.221.97.206:8081/#browse/browse:Visa-Credit-Snapshot</url>
+	      <url>http://54.221.97.206:8081/#browse/browse:Visa-Credit-Snapshot/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
