@@ -102,7 +102,7 @@
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>Landmark Technologies Snapshot Nexus Repository </name>
-	      <url>http://54.82.180.135:8081/repository/BMO-Repository-snapshot/</url>
+	      <url>http://172.31.31.211:8081/repository/BMO-Repository-snapshot/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
